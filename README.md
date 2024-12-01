@@ -2,17 +2,18 @@
 
 Welcome to my Social Network project! This project aims to create a social network using the following technologies:
 
-- ⚛ **React**
-- 🛠 **TypeScript**
-- 🚀 **Redux Toolkit (RTK)**
-- 🎨 **Tailwind CSS**
+- ⚛️ **React**
+- 🛠️ **TypeScript**
+- 🔄 **Redux Toolkit (RTK)**
+- 🧪 **Jest (Unit Tests)**
+- 🎨 **Chakra UI (support for customization and theme switching)**
+- 💎 **SCSS**
+- 🧩 **CSS Modules**
+- 🌐 **React i18next (multilingual support: English and Russian)**
+- 🌗 **Themes (light / dark) (implemented through Chakra UI using useColorMode)**
 - 📡 **Axios**
-- 📄 **JSON Server**
-- 🖼 **Storybook**
-- 🎭 **Jest (Unit Tests)**
-- 💅 **SCSS**
-- 🎛 **CSS Modules**
-- 💡 **FutureSlicedDesign**
+- 📂 **JSON Server**
+- 🚀 **FutureSlicedDesign**
 
 ## 📖 About the Project
 
