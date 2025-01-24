@@ -1,14 +1,5 @@
 import { Route, Routes } from "react-router";
-
-import {
-  ACCOUNT,
-  FRIENDS,
-  HOME,
-  LIKES,
-  LOGIN,
-  MESSAGES,
-  REGISTRATION,
-} from "./../../utils/constants/routes";
+import { ROUTES } from "../../utils/constants/routes";
 import {
   Account,
   Friends,
@@ -17,19 +8,23 @@ import {
   Login,
   Messages,
   Registration,
-} from "./../../pages";
+} from "../../pages";
+import Layout from "widgets";
 
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path={HOME} element={<Home />}>
-        <Route path={ACCOUNT} element={<Account />} />
-        <Route path={MESSAGES} element={<Messages />} />
-        <Route path={LIKES} element={<Likes />} />
-        <Route path={FRIENDS} element={<Friends />} />
-        <Route path={LOGIN} element={<Login />} />
-        <Route path={REGISTRATION} element={<Registration />} />
+      {/* Маршруты для страниц внутри Layout */}
+      <Route element={<Layout />}>
+        <Route path={ROUTES.HOME} element={<Home />} />
+        <Route path={ROUTES.ACCOUNT} element={<Account />} />
+        <Route path={ROUTES.MESSAGES} element={<Messages />} />
+        <Route path={ROUTES.LIKES} element={<Likes />} />
+        <Route path={ROUTES.FRIENDS} element={<Friends />} />
       </Route>
+      {/* Маршруты для страниц без Layout */}
+      <Route path={ROUTES.LOGIN} element={<Login />} />
+      <Route path={ROUTES.REGISTRATION} element={<Registration />} />
     </Routes>
   );
 };

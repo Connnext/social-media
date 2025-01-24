@@ -1,40 +1,32 @@
-import React from 'react'
-import { NavItemProps } from '../Sidebar.types'
-import { Box, Flex, Icon } from '@chakra-ui/react'
+import React from "react";
+import { NavItemProps } from "../Sidebar.types";
+import { Box, Flex, Icon } from "@chakra-ui/react";
+import { Link } from "react-router";
 
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
-    return (
-      <Box
-        as="a"
-        href="#"
-        style={{ textDecoration: 'none' }}
-        _focus={{ boxShadow: 'none' }}>
-        <Flex
-          align="center"
-          p="4"
-          mx="4"
-          borderRadius="lg"
-          role="group"
-          cursor="pointer"
-          _hover={{
-            bg: 'cyan.400',
-            color: 'white',
-          }}
-          {...rest}>
-          {icon && (
-            <Icon
-              mr="4"
-              fontSize="16"
-              _groupHover={{
-                color: 'white',
-              }}
-              as={icon}
-            />
-          )}
-          {children}
-        </Flex>
-      </Box>
-    )
-  }
+const NavItem = ({ icon, children, route }: NavItemProps) => {
+  return (
+    <Link to={route}>
+      <Flex
+        align="center"
+        p="4"
+        mx="4"
+        borderRadius="lg"
+        role="group"
+        cursor="pointer"
+        _hover={{
+          bg: "#F76C6C",
+          color: "white",
+        }}
+      >
+        {icon ? (
+          <Box mr="4" fontSize="16px">
+            {icon} {/* Рендерим компонент иконки напрямую */}
+          </Box>
+        ) : null}
+        {children}
+      </Flex>
+    </Link>
+  );
+};
 
-export default NavItem
+export default NavItem;

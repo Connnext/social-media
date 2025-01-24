@@ -1,8 +1,16 @@
-export const HOME = "/";
-export const ACCOUNT = "/account"; // Страница профиля пользователя
-export const MESSAGES = "/messages"; // Страница сообщений
-export const LIKES = "/likes"; // Страница понравившихся постов
-export const FRIENDS = "/friends"; // Страница со списком друзей
+// routes.ts
 
-export const LOGIN = "/login"; // Вход
-export const REGISTRATION = "/registration"; // Регистрация
+export interface IRoute {
+  [key: string]: string;
+}
+
+export const ROUTES = {
+  HOME: "/",
+  ACCOUNT: "/account",
+  MESSAGES: "/messages",
+  LIKES: "/likes",
+  FRIENDS: "/friends",
+  LOGIN: "/login",
+  REGISTRATION: "/registration",
+  FORGOT_PASSWORD: "/forgot-password",
+};

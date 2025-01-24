@@ -7,8 +7,8 @@ Welcome to my Social Network project! This project aims to create a social netwo
 - 🔄 **Redux Toolkit (RTK)**
 - 🧪 **Jest (Unit Tests)**
 - 🎨 **Chakra UI (support for customization and theme switching)**
-- 💎 **SCSS**
-- 🧩 **CSS Modules**
+<!-- - 💎 **SCSS**
+- 🧩 **CSS Modules** -->
 - 🌐 **React i18next (multilingual support: English and Russian)**
 - 🌗 **Themes (light / dark) (implemented through Chakra UI using useColorMode)**
 - 📡 **Axios**

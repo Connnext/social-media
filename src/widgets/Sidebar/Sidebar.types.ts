@@ -1,14 +1,18 @@
 import { IconType } from "react-icons";
+import { ReactNode } from "react";
 import { BoxProps, FlexProps } from "@chakra-ui/react";
+import { IRoute } from "utils/constants/routes";
 
 export interface LinkItemProps {
   name: string /** Название пункта меню */;
-  icon: IconType /** Иконка из react-icons */;
+  icon: ReactNode /** Иконка из react-icons или JSX-элемент */;
+  route: string;
 }
 
 export interface NavItemProps extends FlexProps {
-  icon: IconType /** Иконка для элемента навигации */;
-  children: React.ReactNode /** Вложенный текст или элементы */;
+  icon?: ReactNode /** Иконка для элемента навигации */;
+  children: string /** Вложенный текст или элементы */;
+  route: string;
 }
 
 export interface MobileProps extends FlexProps {

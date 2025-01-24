@@ -1,15 +1,15 @@
 import { AppRouter } from "./app/router/AppRouter";
-import { Provider } from "./components/ui/provider";
-import Layout from "./widgets";
+import { ChakraProvider } from "@chakra-ui/react";
+import { ThemeProvider } from "next-themes";
+import theme from "theme";
 
 function App() {
   return (
-    <Provider>
-      {/* <Layout> 
+    <ChakraProvider value={theme}>
+      <ThemeProvider attribute="class" disableTransitionOnChange>
         <AppRouter />
-      </Layout> */}
-      <AppRouter />
-    </Provider>
+      </ThemeProvider>
+    </ChakraProvider>
   );
 }
 
